@@ -14,11 +14,16 @@ int main() {
 
     /* Main Logic */
     long long int ans = 1;
+    
+    // 予め0を検索
     rep (i, N) {
         if (A.at(i) == 0) {
-            ans = 0;
-            break;
+            cout << 0 << endl;
+            return 0;
         }
+    }
+    // 本処理
+    rep (i, N) {       
         if (A.at(i) <= 1000000000000000000 / ans) {
             ans *= A.at(i);
         } else {
